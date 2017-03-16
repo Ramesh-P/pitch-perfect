@@ -12,7 +12,7 @@ import AVFoundation
 class PlaybackAudioViewController: UIViewController {
     
     // MARK: Properties
-    var playSound: Int!
+    var playSound: Int = Int()
     var recordedAudioURL: NSURL!
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
