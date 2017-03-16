@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9qy-iz-bHO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record Audio View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RecordAudioViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="UJG-E8-Igf" userLabel="Background"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6p7-p4-V5o" userLabel="Stack View Portrait">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fki-59-tqc">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StudioSpacer-1-Portrait" translatesAutoresizingMaskIntoConstraints="NO" id="JQG-hr-yGs" userLabel="Spacer-1"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23l-2Y-sQA" userLabel="Record">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="23l-2Y-sQA" secondAttribute="height" multiplier="1:1" id="uCy-LM-GsS"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Record"/>
+                                                <connections>
+                                                    <action selector="startRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XyP-vp-6tw"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StudioSpacer-2-Portrait" translatesAutoresizingMaskIntoConstraints="NO" id="r8r-lh-N4Z" userLabel="Spacer-2"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heU-F7-iLv" userLabel="Stop">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="heU-F7-iLv" secondAttribute="height" multiplier="1:1" id="ZGC-HX-ZaN"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Stop-Disabled"/>
+                                                <connections>
+                                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TPf-8R-E8a"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StudioSpacer-3-Portrait" translatesAutoresizingMaskIntoConstraints="NO" id="UBc-hf-sl0" userLabel="Spacer-3"/>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="cND-ru-E9I">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StudioSpacer-4-Portrait" translatesAutoresizingMaskIntoConstraints="NO" id="qxe-qg-ggo" userLabel="Spacer-4"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3V-mg-ld7" userLabel="Status">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O8K-EO-Nqp" userLabel="Stack View Landscape">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StudioSpacer-1-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="VNu-pk-feu" userLabel="Spacer-1"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kor-Ua-dHh">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StudioSpacer-2-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="ZJs-Ta-x6m" userLabel="Spacer-2"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWy-fe-JQh" userLabel="Record">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hWy-fe-JQh" secondAttribute="height" multiplier="1:1" id="b1H-uf-6Ft"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Record"/>
+                                                <connections>
+                                                    <action selector="startRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="buF-v5-fVy"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StudioSpacer-3-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="c9r-Dg-q9R" userLabel="Spacer-3"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lud-dN-c7C" userLabel="Stop">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="lud-dN-c7C" secondAttribute="height" multiplier="1:1" id="0mw-T5-U9f"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Stop-Disabled"/>
+                                                <connections>
+                                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvE-ty-tc5"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StudioSpacer-4-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="fpK-Xz-9tO" userLabel="Spacer-4"/>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StudioSpacer-5-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="KFn-0g-t8B" userLabel="Spacer-5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3De-cd-gUB">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StudioSpacer-6-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="Y57-G6-8yR" userLabel="Spacer-6"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2X-Ys-OJy" userLabel="Status">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O8K-EO-Nqp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" priority="999" id="5gd-3k-sjI"/>
+                            <constraint firstItem="O8K-EO-Nqp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" priority="999" id="EmY-WB-9Hs"/>
+                            <constraint firstItem="UJG-E8-Igf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Hfp-zO-GwD"/>
+                            <constraint firstItem="6p7-p4-V5o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IFV-iL-0XY"/>
+                            <constraint firstItem="UJG-E8-Igf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NJZ-8h-6AY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UJG-E8-Igf" secondAttribute="trailing" id="Nhe-rL-dxW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UJG-E8-Igf" secondAttribute="bottom" constant="8" symbolic="YES" id="O8l-78-W8d"/>
+                            <constraint firstItem="6p7-p4-V5o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="S90-Pw-kEd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6p7-p4-V5o" secondAttribute="trailing" id="TuF-fb-78e"/>
+                            <constraint firstItem="6p7-p4-V5o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aDQ-us-ZFn"/>
+                            <constraint firstItem="O8K-EO-Nqp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="999" constant="8" symbolic="YES" id="kpL-K4-pB0"/>
+                            <constraint firstItem="UJG-E8-Igf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lV0-kk-7fN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6p7-p4-V5o" secondAttribute="bottom" constant="8" symbolic="YES" id="nKt-Ja-kc3"/>
+                            <constraint firstItem="6p7-p4-V5o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nuh-X8-aIv"/>
+                            <constraint firstItem="UJG-E8-Igf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wvj-ef-CWz"/>
+                            <constraint firstItem="O8K-EO-Nqp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" priority="999" id="yXI-Hx-Lsa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O8K-EO-Nqp" secondAttribute="trailing" priority="999" id="ynK-m1-p1M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O8K-EO-Nqp" secondAttribute="bottom" priority="999" constant="8" symbolic="YES" id="zwu-cP-Miw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sh1-Q1-wgh">
+                        <barButtonItem key="backBarButtonItem" title=" " id="GKe-xG-J9g">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <connections>
+                        <outlet property="background" destination="UJG-E8-Igf" id="yfh-ed-q12"/>
+                        <outlet property="landscapeLayout" destination="O8K-EO-Nqp" id="dZx-VI-l1E"/>
+                        <outlet property="portraitLayout" destination="6p7-p4-V5o" id="0P6-Hd-b9O"/>
+                        <outletCollection property="statusLabels" destination="q3V-mg-ld7" collectionClass="NSMutableArray" id="oFp-wo-gjd"/>
+                        <outletCollection property="recordButtons" destination="23l-2Y-sQA" collectionClass="NSMutableArray" id="gB2-Qr-bCj"/>
+                        <outletCollection property="stopButtons" destination="heU-F7-iLv" collectionClass="NSMutableArray" id="vfD-uN-fTe"/>
+                        <outletCollection property="statusLabels" destination="b2X-Ys-OJy" collectionClass="NSMutableArray" id="Mbv-ku-0c8"/>
+                        <outletCollection property="stopButtons" destination="lud-dN-c7C" collectionClass="NSMutableArray" id="LH8-bx-VLv"/>
+                        <outletCollection property="recordButtons" destination="hWy-fe-JQh" collectionClass="NSMutableArray" id="NGw-Fm-in4"/>
+                        <segue destination="mKP-9f-5fd" kind="show" identifier="toPlaybackAudio" id="aTC-gJ-WTr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="-779"/>
+        </scene>
+        <!--Playback Audio View Controller-->
+        <scene sceneID="8BY-lv-wig">
+            <objects>
+                <viewController id="mKP-9f-5fd" customClass="PlaybackAudioViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vin-gz-bhy"/>
+                        <viewControllerLayoutGuide type="bottom" id="mgt-ar-588"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H1m-rp-Epe">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5m-Tk-maY" userLabel="Background"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="txY-sP-Q3l" userLabel="Stack View Portrait">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TheaterSpacer-1-Portrait" translatesAutoresizingMaskIntoConstraints="NO" id="rI4-uc-to8" userLabel="Spacer-1"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="gBr-JV-kqI">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghk-3G-rcX" userLabel="Slow">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ghk-3G-rcX" secondAttribute="height" multiplier="1:1" id="iJg-zQ-b5s"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Slow"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="AHd-E3-GC5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efD-4E-Uhi" userLabel="Fast">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="efD-4E-Uhi" secondAttribute="height" multiplier="1:1" id="5MB-iL-x1x"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Fast"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="nEb-YF-9J4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ghk-3G-rcX" firstAttribute="width" secondItem="efD-4E-Uhi" secondAttribute="height" multiplier="1:1" id="TPR-z2-obv"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TheaterSpacer-2-Portrait" translatesAutoresizingMaskIntoConstraints="NO" id="sKL-aM-zTe" userLabel="Spacer-2"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="z7s-z4-3bH">
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCF-yL-YjE" userLabel="Funny">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="BCF-yL-YjE" secondAttribute="height" multiplier="1:1" id="1ze-zj-B8m"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Funny"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="CaX-JM-gfz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSk-7L-UF0" userLabel="Evil">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bSk-7L-UF0" secondAttribute="height" multiplier="1:1" id="TPv-Df-d7z"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Evil"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="j3g-oA-4Nr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BCF-yL-YjE" firstAttribute="width" secondItem="bSk-7L-UF0" secondAttribute="height" multiplier="1:1" id="f55-Ms-BfJ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TheaterSpacer-3-Portrait" translatesAutoresizingMaskIntoConstraints="NO" id="nce-0I-6Za" userLabel="Spacer-3"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="jBU-4Y-hC0">
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4h-Ke-hsT" userLabel="Echo">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="l4h-Ke-hsT" secondAttribute="height" multiplier="1:1" id="0BY-4q-idS"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Echo"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="2Qu-0s-1nb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9M-ES-yb6" userLabel="Reverb">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="p9M-ES-yb6" secondAttribute="height" multiplier="1:1" id="hU6-ez-OLZ"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Reverb"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="rC1-GW-vXL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="l4h-Ke-hsT" firstAttribute="width" secondItem="p9M-ES-yb6" secondAttribute="height" multiplier="1:1" id="h6V-W6-Z7d"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TheaterSpacer-4-Portrait" translatesAutoresizingMaskIntoConstraints="NO" id="CeV-xb-6ZD" userLabel="Spacer-4"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lYA-Lt-f2w">
+                                        <subviews>
+                                            <button opaque="NO" tag="100" contentMode="scaleAspectFit" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVM-zO-wZU" userLabel="StopPlayback">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oVM-zO-wZU" secondAttribute="height" multiplier="1:1" id="CWr-Rt-OU5"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="StopPlayback-Disabled"/>
+                                                <connections>
+                                                    <action selector="stopPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="j23-9P-Q2Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TheaterSpacer-5-Portrait" translatesAutoresizingMaskIntoConstraints="NO" id="KVX-bD-OMB" userLabel="Spacer-5"/>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="z7s-z4-3bH" firstAttribute="centerX" secondItem="txY-sP-Q3l" secondAttribute="centerX" id="Wna-vr-Ecl"/>
+                                    <constraint firstItem="gBr-JV-kqI" firstAttribute="centerX" secondItem="txY-sP-Q3l" secondAttribute="centerX" id="ZHK-pY-zLg"/>
+                                    <constraint firstItem="gBr-JV-kqI" firstAttribute="height" secondItem="z7s-z4-3bH" secondAttribute="height" id="fJE-7Z-WWY"/>
+                                    <constraint firstItem="jBU-4Y-hC0" firstAttribute="height" secondItem="lYA-Lt-f2w" secondAttribute="height" multiplier="425:300" id="qJC-LK-dFg"/>
+                                    <constraint firstItem="z7s-z4-3bH" firstAttribute="height" secondItem="jBU-4Y-hC0" secondAttribute="height" id="tMI-lj-OgT"/>
+                                    <constraint firstItem="jBU-4Y-hC0" firstAttribute="centerX" secondItem="txY-sP-Q3l" secondAttribute="centerX" id="vh3-yf-qfL"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Omb-h5-tNX" userLabel="Stack View Landscape">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TheaterSpacer-1-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="eUr-VB-wZt" userLabel="Spacer-1"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="Oyf-8p-eo1">
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HF-B6-LTv" userLabel="Fast">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8HF-B6-LTv" secondAttribute="height" multiplier="1:1" id="yrV-3V-zbi"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Fast"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="mUj-3J-BsE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI2-QX-522" userLabel="Slow">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="uI2-QX-522" secondAttribute="height" multiplier="1:1" id="c9D-ir-E8V"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Slow"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="0zE-HY-9va"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8HF-B6-LTv" firstAttribute="width" secondItem="uI2-QX-522" secondAttribute="height" multiplier="1:1" id="I7H-Qy-tOB"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TheaterSpacer-2-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="XTD-Xa-uXm" userLabel="Spacer-2"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="RHj-gR-3cy">
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6P-FM-xIX" userLabel="Evil">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="z6P-FM-xIX" secondAttribute="height" multiplier="1:1" id="gRz-sZ-L5m"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Evil"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="lPJ-Vr-oyo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACL-ld-JAL" userLabel="Funny">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ACL-ld-JAL" secondAttribute="height" multiplier="1:1" id="8t3-2s-hly"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Funny"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="VSy-VO-OeK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="z6P-FM-xIX" firstAttribute="width" secondItem="ACL-ld-JAL" secondAttribute="height" multiplier="1:1" id="AHg-4Z-xZK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TheaterSpacer-3-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="cpJ-Hu-7gt" userLabel="Spacer-3"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="TqI-mY-SRD">
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ha2-NS-ofW" userLabel="Reverb">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ha2-NS-ofW" secondAttribute="height" multiplier="1:1" id="tTv-N4-1V3"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Reverb"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="j0V-UH-4Xd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAa-Qz-9Y4" userLabel="Echo">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="BAa-Qz-9Y4" secondAttribute="height" multiplier="1:1" id="qhw-TL-zGb"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Echo"/>
+                                                <connections>
+                                                    <action selector="startPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="gsl-6p-c57"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ha2-NS-ofW" firstAttribute="width" secondItem="BAa-Qz-9Y4" secondAttribute="height" multiplier="1:1" id="4GJ-xe-0ss"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TheaterSpacer-4-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="tdO-xJ-ryF" userLabel="Spacer-4"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sa7-St-xbi">
+                                        <subviews>
+                                            <button opaque="NO" tag="100" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud8-v9-2zU" userLabel="StopPlayback">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ud8-v9-2zU" secondAttribute="height" multiplier="1:1" id="CyM-B5-9sX"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="StopPlayback-Disabled"/>
+                                                <connections>
+                                                    <action selector="stopPlayback:" destination="mKP-9f-5fd" eventType="touchUpInside" id="3gS-Qq-8Qb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TheaterSpacer-5-Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="0Ey-ep-dES" userLabel="Spacer-5"/>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Oyf-8p-eo1" firstAttribute="width" secondItem="RHj-gR-3cy" secondAttribute="width" id="CSf-2Y-Q8Y"/>
+                                    <constraint firstItem="TqI-mY-SRD" firstAttribute="width" secondItem="Sa7-St-xbi" secondAttribute="width" multiplier="425:300" id="cwG-EI-ytB"/>
+                                    <constraint firstItem="RHj-gR-3cy" firstAttribute="width" secondItem="TqI-mY-SRD" secondAttribute="width" id="scK-7N-W52"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="txY-sP-Q3l" firstAttribute="top" secondItem="Vin-gz-bhy" secondAttribute="bottom" constant="8" symbolic="YES" id="0Oo-xN-Zyk"/>
+                            <constraint firstItem="Y5m-Tk-maY" firstAttribute="centerY" secondItem="H1m-rp-Epe" secondAttribute="centerY" id="73T-sW-YFL"/>
+                            <constraint firstItem="Omb-h5-tNX" firstAttribute="top" secondItem="Vin-gz-bhy" secondAttribute="bottom" constant="8" symbolic="YES" id="AF8-hk-oan"/>
+                            <constraint firstItem="txY-sP-Q3l" firstAttribute="leading" secondItem="H1m-rp-Epe" secondAttribute="leadingMargin" id="AqU-s4-Bdc"/>
+                            <constraint firstItem="mgt-ar-588" firstAttribute="top" secondItem="txY-sP-Q3l" secondAttribute="bottom" constant="8" symbolic="YES" id="Hdt-Fm-gaL"/>
+                            <constraint firstItem="Omb-h5-tNX" firstAttribute="centerY" secondItem="H1m-rp-Epe" secondAttribute="centerY" id="Hmx-Se-OfY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="txY-sP-Q3l" secondAttribute="trailing" id="HpV-hm-Cq3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y5m-Tk-maY" secondAttribute="trailing" id="JUB-eb-ktM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Omb-h5-tNX" secondAttribute="leading" id="Jbg-IH-bWm"/>
+                            <constraint firstItem="Omb-h5-tNX" firstAttribute="centerX" secondItem="H1m-rp-Epe" secondAttribute="centerX" id="QPn-Ie-JgO"/>
+                            <constraint firstItem="mgt-ar-588" firstAttribute="top" secondItem="Omb-h5-tNX" secondAttribute="bottom" constant="8" symbolic="YES" id="Se3-Ih-c28"/>
+                            <constraint firstItem="txY-sP-Q3l" firstAttribute="centerX" secondItem="H1m-rp-Epe" secondAttribute="centerX" id="bPe-VQ-AxJ"/>
+                            <constraint firstItem="mgt-ar-588" firstAttribute="top" secondItem="Y5m-Tk-maY" secondAttribute="bottom" constant="8" symbolic="YES" id="brk-CG-mhV"/>
+                            <constraint firstItem="Y5m-Tk-maY" firstAttribute="leading" secondItem="H1m-rp-Epe" secondAttribute="leadingMargin" id="jch-OX-xSJ"/>
+                            <constraint firstItem="Y5m-Tk-maY" firstAttribute="top" secondItem="Vin-gz-bhy" secondAttribute="bottom" constant="8" symbolic="YES" id="sgd-Vr-hE6"/>
+                            <constraint firstItem="txY-sP-Q3l" firstAttribute="centerY" secondItem="H1m-rp-Epe" secondAttribute="centerY" id="uat-Yp-6BD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Omb-h5-tNX" secondAttribute="trailing" id="x2y-3U-oKd"/>
+                            <constraint firstItem="Y5m-Tk-maY" firstAttribute="centerX" secondItem="H1m-rp-Epe" secondAttribute="centerX" id="yh0-qL-bci"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="background" destination="Y5m-Tk-maY" id="YxQ-tC-nkc"/>
+                        <outlet property="landscapeLayout" destination="Omb-h5-tNX" id="Plr-OY-6tb"/>
+                        <outlet property="portraitLayout" destination="txY-sP-Q3l" id="3N7-3v-eOR"/>
+                        <outletCollection property="slowButtons" destination="Ghk-3G-rcX" collectionClass="NSMutableArray" id="Rxm-Nq-OjR"/>
+                        <outletCollection property="fastButtons" destination="efD-4E-Uhi" collectionClass="NSMutableArray" id="lk5-d6-W7q"/>
+                        <outletCollection property="evilButtons" destination="bSk-7L-UF0" collectionClass="NSMutableArray" id="Mgu-TA-qPr"/>
+                        <outletCollection property="funnyButtons" destination="BCF-yL-YjE" collectionClass="NSMutableArray" id="Rxf-CJ-iSt"/>
+                        <outletCollection property="reverbButtons" destination="p9M-ES-yb6" collectionClass="NSMutableArray" id="mcH-Za-mNP"/>
+                        <outletCollection property="echoButtons" destination="l4h-Ke-hsT" collectionClass="NSMutableArray" id="XTt-SD-5Rs"/>
+                        <outletCollection property="stopButtons" destination="oVM-zO-wZU" collectionClass="NSMutableArray" id="HqY-s4-cNf"/>
+                        <outletCollection property="fastButtons" destination="8HF-B6-LTv" collectionClass="NSMutableArray" id="lmD-yQ-dI8"/>
+                        <outletCollection property="slowButtons" destination="uI2-QX-522" collectionClass="NSMutableArray" id="Mbt-e5-Mzx"/>
+                        <outletCollection property="evilButtons" destination="z6P-FM-xIX" collectionClass="NSMutableArray" id="i0P-UR-iy2"/>
+                        <outletCollection property="funnyButtons" destination="ACL-ld-JAL" collectionClass="NSMutableArray" id="bAt-zs-g4E"/>
+                        <outletCollection property="reverbButtons" destination="Ha2-NS-ofW" collectionClass="NSMutableArray" id="aQd-vN-EMI"/>
+                        <outletCollection property="echoButtons" destination="BAa-Qz-9Y4" collectionClass="NSMutableArray" id="nQ4-1X-Gaf"/>
+                        <outletCollection property="stopButtons" destination="Ud8-v9-2zU" collectionClass="NSMutableArray" id="9Ab-zV-zjs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qP2-IO-UPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="-779"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f1t-Bw-Vfe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9qy-iz-bHO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" translucent="NO" id="yyy-s2-3Ur">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.77647058823529413" green="0.12549019607843137" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="L13-4c-uXx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PbU-zQ-eDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370" y="-779"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Echo" width="213" height="213"/>
+        <image name="Evil" width="213" height="213"/>
+        <image name="Fast" width="213" height="213"/>
+        <image name="Funny" width="213" height="213"/>
+        <image name="Record" width="325" height="325"/>
+        <image name="Reverb" width="213" height="213"/>
+        <image name="Slow" width="213" height="213"/>
+        <image name="Stop-Disabled" width="150" height="150"/>
+        <image name="StopPlayback-Disabled" width="151" height="151"/>
+        <image name="StudioSpacer-1-Landscape" width="1104" height="100"/>
+        <image name="StudioSpacer-1-Portrait" width="621" height="281"/>
+        <image name="StudioSpacer-2-Landscape" width="377" height="325"/>
+        <image name="StudioSpacer-2-Portrait" width="621" height="38"/>
+        <image name="StudioSpacer-3-Landscape" width="25" height="325"/>
+        <image name="StudioSpacer-3-Portrait" width="621" height="181"/>
+        <image name="StudioSpacer-4-Landscape" width="227" height="325"/>
+        <image name="StudioSpacer-4-Portrait" width="310" height="63"/>
+        <image name="StudioSpacer-5-Landscape" width="1104" height="85"/>
+        <image name="StudioSpacer-6-Landscape" width="552" height="63"/>
+        <image name="TheaterSpacer-1-Landscape" width="71" height="573"/>
+        <image name="TheaterSpacer-1-Portrait" width="621" height="38"/>
+        <image name="TheaterSpacer-2-Landscape" width="25" height="573"/>
+        <image name="TheaterSpacer-2-Portrait" width="621" height="25"/>
+        <image name="TheaterSpacer-3-Landscape" width="25" height="573"/>
+        <image name="TheaterSpacer-3-Portrait" width="621" height="25"/>
+        <image name="TheaterSpacer-4-Landscape" width="75" height="573"/>
+        <image name="TheaterSpacer-4-Portrait" width="621" height="75"/>
+        <image name="TheaterSpacer-5-Landscape" width="120" height="573"/>
+        <image name="TheaterSpacer-5-Portrait" width="621" height="87"/>
+    </resources>
+</document>
