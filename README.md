@@ -8,7 +8,7 @@ Pitch Perfect is built and tested for the following software versions:
 * iOS 10.0 (Minimum)
 * Swift 3.0.1
 ## Preview
-
+![Alt Text](https://cloud.githubusercontent.com/assets/25907551/24057258/2a9aa8a4-0b1d-11e7-9d5f-63bb45924258.gif)
 ## Features
 Pitch Perfect incorporates all the features stipulated by Udacity and extra credit and additional features as listed below.
 ### Extra Credit Features
