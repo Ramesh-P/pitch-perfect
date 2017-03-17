@@ -13,13 +13,13 @@ Pitch Perfect is built and tested for the following software versions:
 Pitch Perfect incorporates all the features stipulated by Udacity and extra credit and additional features as listed below.
 ### Extra Credit Features
 Pitch Perfect includes the following extra credit features:
-* App layout is leveraged using Apple’s new auto layout technology `stack views` for the entire application
+* App layout is leveraged using Apple’s new auto layout technology, `stack views` for the entire application
   * Brilliant use of stack views helps maintain user interface proportionality on both orientations
 ### Additional Features
 Pitch Perfect is artistically designed with the following additional features:
 #### Playback Audio View
 * User can enjoy replaying the recorded audio in six different sounds endlessly
-* Distinctive button images visually indicates the current sound being played and when other sounds are available for replay
+* Distinctive button images visually indicates the current sound being played and when other sounds are available for playing
 ## Authors
 * [Ramesh Parthasarathy](mailto:msg.rameshp@gmail.com)
 ## License
